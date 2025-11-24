@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://byxd0aku5csm7"]
+
+[ext_resource type="Texture2D" uid="uid://chrtogqqmtlk2" path="res://Assets/Sprites/Characters/BaseChar/basechar.png" id="1_mcdtu"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_mcdtu")
+hframes = 4
