@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://byxd0aku5csm7"]
+[gd_scene load_steps=3 format=3 uid="uid://byxd0aku5csm7"]
 
 [ext_resource type="Texture2D" uid="uid://chrtogqqmtlk2" path="res://Assets/Sprites/Characters/BaseChar/basechar.png" id="1_mcdtu"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcdtu"]
+radius = 7.0
+height = 26.0
+
 [node name="Player" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 texture_filter = 1
 texture = ExtResource("1_mcdtu")
 hframes = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mcdtu")
